@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="mb-4">Добавить происшествие</h1>
+<form method="POST" action="/add_incident" class="row g-3">
+    <div class="col-md-6">
+        <label for="registration_number" class="form-label">Регистрационный номер</label>
+        <input type="text" id="registration_number" name="registration_number" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+        <label for="registration_date" class="form-label">Дата регистрации</label>
+        <input type="date" id="registration_date" name="registration_date" class="form-control" required>
+    </div>
+    <div class="col-12">
+        <label for="summary" class="form-label">Краткая фабула</label>
+        <textarea id="summary" name="summary" class="form-control" rows="3" required></textarea>
+    </div>
+    <div class="col-12">
+        <label for="decision" class="form-label">Решение</label>
+        <input type="text" id="decision" name="decision" class="form-control" required>
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-success">Сохранить</button>
+    </div>
+</form>
+{% endblock %}

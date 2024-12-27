@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Происшествия для {{ person.first_name }} {{ person.last_name }}</h2>
+<p><strong>Адрес:</strong> {{ person.address }}</p>
+<p>Количество происшествий: {{ count }}</p>
+<a href="{{ url_for('persons_list') }}" class="btn btn-secondary">Назад к списку</a>
+{% endblock %}

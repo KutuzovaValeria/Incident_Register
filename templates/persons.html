@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="mb-4">Список лиц</h1>
+<a href="/add_person" class="btn btn-primary mb-3">Добавить лицо</a>
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Регистрационный номер</th>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Отчество</th>
+            <th>Адрес</th>
+            <th>Судимости</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for person in persons %}
+        <tr>
+            <td>{{ person.registration_number }}</td>
+            <td>{{ person.last_name }}</td>
+            <td>{{ person.first_name }}</td>
+            <td>{{ person.middle_name }}</td>
+            <td>{{ person.address }}</td>
+            <td>{{ person.convictions_count }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
