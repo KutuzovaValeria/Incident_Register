@@ -13,14 +13,14 @@ migrate = Migrate(app, db)
 def index():
     return render_template('index.html', title="Главная страница")
 
-@app.route('/incidents_count', methods=['GET'])
-def get_incidents_count():
-    start_date = request.args.get('start_date')
-    end_date = request.args.get('end_date')
-    count = Incident.query.filter(
-        Incident.registration_date.between(start_date, end_date)
-    ).count()
-    return render_template('/incidents_count.html', start_date=start_date, end_date=end_date, count=count)
+# @app.route('/incidents_count', methods=['GET'])
+# def get_incidents_count():
+#     start_date = request.args.get('start_date')
+#     end_date = request.args.get('end_date')
+#     count = Incident.query.filter(
+#         Incident.registration_date.between(start_date, end_date)
+#     ).count()
+#     return render_template('/incidents_count.html', start_date=start_date, end_date=end_date, count=count)
 
 
 @app.route('/person_incidents/<person_id>', methods=['GET'])
