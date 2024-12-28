@@ -1,0 +1,51 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pdb
+*.egg-info/
+*.eggs/
+dist/
+build/
+*.log
+
+# Flask
+instance/
+*.sqlite
+*.db
+*.pid
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# Test files
+*.coverage
+nosetests.xml
+coverage.xml
+*.cover
+*.hypothesis/
+
+# Env and virtual environments
+venv/
+ve/
+ENV/
+env/
+.venv/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
